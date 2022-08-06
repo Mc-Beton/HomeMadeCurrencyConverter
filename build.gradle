@@ -6,6 +6,15 @@ plugins {
 
 allprojects {
     apply plugin: 'java'
+    apply plugin: 'org.springframework.boot'
+
+    bootJar {
+        enabled = false
+    }
+
+    jar {
+        enabled = true
+    }
 
     group 'org.example'
     version '1.0-SNAPSHOT'
