@@ -2,4 +2,5 @@ rootProject.name = 'HomeMadeConverter'
 include 'eureka'
 include 'feign-clients'
 include 'client'
+include 'accounts'
 

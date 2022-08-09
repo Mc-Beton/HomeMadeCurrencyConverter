@@ -10,6 +10,7 @@
         <module name="HomeMadeConverter.main" />
         <module name="HomeMadeConverter.client.main" />
         <module name="HomeMadeConverter.eureka.main" />
+        <module name="HomeMadeConverter.accounts.main" />
         <module name="HomeMadeConverter.feign-clients.main" />
       </profile>
     </annotationProcessing>
