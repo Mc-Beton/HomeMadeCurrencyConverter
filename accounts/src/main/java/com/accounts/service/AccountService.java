@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Service
 @AllArgsConstructor
@@ -23,5 +24,13 @@ public class AccountService {
                 .created(LocalDateTime.now())
                 .build();
         accountRepository.save(account);
+    }
+
+    public List<Account> getClientsAccountList(Long clientId) {
+        return accountRepository.findAllByClientId(clientId);
+    }
+
+    public void deleteAccount(Long accountId) {
+        accountRepository.deleteById(accountId);
     }
 }
