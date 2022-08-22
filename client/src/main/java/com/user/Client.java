@@ -1,5 +1,6 @@
 package com.user;
 
+import com.feign.client.ClientType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -26,4 +27,15 @@ public class Client {
     private String surname;
     private String email;
     private String phoneNumber;
+    private ClientType clientType;
+
+    public Client(Integer id, String name, String surname, String email, String phoneNumber) {
+        this.id = id;
+        this.name = name;
+        this.surname = surname;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+        this.clientType = ClientType.BASIC;
+    }
+
 }
