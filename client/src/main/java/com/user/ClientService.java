@@ -36,8 +36,8 @@ public class ClientService {
         log.info("Process started: add new client account...  ");
         Optional<Client> byEmail = clientRepository.findByEmail(clientDto.getEmail());
         Optional<Client> byPhoneNumer = clientRepository.findByPhoneNumber(clientDto.getPhoneNumber());
-        if (byEmail.isEmpty()){
-            if (byPhoneNumer.isEmpty()){
+        if (!byEmail.isPresent()){
+            if (!byPhoneNumer.isPresent()){
                 clientRepository.save(clientMapper.mapToClient(clientDto));
             }
         }else{
