@@ -15,7 +15,8 @@ public class ClientMapper {
                 clientDto.getName(),
                 clientDto.getSurname(),
                 clientDto.getEmail(),
-                clientDto.getPhoneNumber()
+                clientDto.getPhoneNumber(),
+                clientDto.getClientType()
         );
     }
     public ClientDto mapToClientDto(Client client){
@@ -24,7 +25,8 @@ public class ClientMapper {
                 client.getName(),
                 client.getSurname(),
                 client.getEmail(),
-                client.getPhoneNumber()
+                client.getPhoneNumber(),
+                client.getClientType()
         );
     }
     private List<ClientDto> mapToClientDtoList(List<Client> list){
